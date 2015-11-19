@@ -38,6 +38,8 @@ class LandingViewController: UIViewController, RiffleDelegate {
     
     
     @IBAction func login(sender: AnyObject) {
+        Riffle.setDevFabric()
+        
         textfieldUsername.resignFirstResponder()
         let name = textfieldUsername.text!
         

@@ -15,8 +15,9 @@ let ANSWER_TIME = 5.0
 let PICK_TIME = 5.0
 let SCORE_TIME = 3.0
 let EMPTY_TIME = 1.0
+ 
 
-
+Riffle.setDevFabric()
 let app = RiffleAgent(domain: "xs.demo.damouse.cardsagainst")
 
 
@@ -40,6 +41,7 @@ class Container: RiffleAgent {
         // Called automatically when a domain leaves the fabric
         app.subscribe("sessionLeft", playerLeft)
     }
+    
     
     func addPlayer(domain: String) -> AnyObject {
         // Add the new player and draw them a hand. Let everyone else in the room know theres a new player
@@ -177,6 +179,7 @@ class Container: RiffleAgent {
         print("New Czar: \(czar!.domain)")
     }
 
+    
     // MARK: Utilities
     func startTimer(time: NSTimeInterval, selector: String, info: AnyObject? = nil) {
         // Calls the given function after (time) seconds. Used to count down the seconds on the current round
