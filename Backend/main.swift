@@ -15,7 +15,7 @@ let ANSWER_TIME = 5.0
 let PICK_TIME = 5.0
 let SCORE_TIME = 3.0
 let EMPTY_TIME = 1.0
- 
+
 
 Riffle.setDevFabric()
 let app = RiffleAgent(domain: "xs.demo.damouse.cardsagainst")
